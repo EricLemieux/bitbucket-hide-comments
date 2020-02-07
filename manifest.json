@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Bitbucket Hide Comments",
+  "version": "1.0",
+  "description": "Adds a toggle in order to hide comments on bitbucket pull requests.",
+  "icons": {
+    "48": "icons/bitbucket.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/bitbucket.png",
+    "default_title": "Bitbucket Hide Comments"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.bitbucket.org/*"
+      ],
+      "js": [
+        "comments.js"
+      ]
+    }
+  ]
+}
