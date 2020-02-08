@@ -1,2 +1,5 @@
 # External dependencies
 node_modules/
+
+# Packaged extension
+web-ext-artifacts/

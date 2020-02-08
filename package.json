@@ -4,7 +4,9 @@
   "description": "",
   "main": "background.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "web-ext run",
+    "build": "web-ext build",
+    "lint": "web-ext lint"
   },
   "repository": {
     "type": "git",
@@ -19,5 +21,8 @@
   "homepage": "https://github.com/EricLemieux/bitbucket-hide-comments#readme",
   "dependencies": {
     "webextension-polyfill": "^0.6.0"
+  },
+  "devDependencies": {
+    "web-ext": "^4.0.0"
   }
 }
