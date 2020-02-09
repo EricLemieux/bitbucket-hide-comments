@@ -1,3 +1,5 @@
+const browser = require("webextension-polyfill");
+
 function sendMessageToTabs(tabs) {
     for (let tab of tabs) {
         browser.tabs.sendMessage(

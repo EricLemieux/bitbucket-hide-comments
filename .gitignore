@@ -1,5 +1,8 @@
 # External dependencies
 node_modules/
 
+# Compiled source
+dist/
+
 # Packaged extension
 web-ext-artifacts/

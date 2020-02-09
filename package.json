@@ -1,11 +1,13 @@
 {
   "name": "bitbucket-hide-comments",
   "version": "1.0.0",
-  "description": "",
-  "main": "background.js",
+  "description": "Web extension that adds a toggle to bitbucket pr comments",
+  "main": "src/comments.js",
   "scripts": {
     "start": "web-ext run",
-    "build": "web-ext build",
+    "build-background": "webpack src/background.js -o dist/background.js",
+    "build-content": "webpack src/comments.js -o dist/comments.js",
+    "build": "npm run build-background && npm run build-content &&  web-ext sign --channel=unlisted",
     "lint": "web-ext lint"
   },
   "repository": {
@@ -13,7 +15,7 @@
     "url": "git+https://github.com/EricLemieux/bitbucket-hide-comments.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Eric Lemieux",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/EricLemieux/bitbucket-hide-comments/issues"
@@ -23,6 +25,8 @@
     "webextension-polyfill": "^0.6.0"
   },
   "devDependencies": {
-    "web-ext": "^4.0.0"
+    "web-ext": "^3.0.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   }
 }
