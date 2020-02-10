@@ -1,12 +1,19 @@
 const browser = require("webextension-polyfill");
 
-function hideComments() {
-    Array.from(document.querySelectorAll("[^id=comment-"))
-        .forEach(node => node.parentNode.parentNode.parentNode.style.display = "none");
+const none = "none";
+
+function toggleComments() {
+  Array.from(document.querySelectorAll("[id^=comment-]"))
+    .forEach(node => {
+      const commentBlock = node.parentNode.parentNode.parentNode;
+      const display = commentBlock.style.display;
+
+      commentBlock.style.display = display === none ? null : none;
+    });
 }
 
 browser.runtime.onMessage.addListener(request => {
-    if (request.event === "toggle") {
-        hideComments();
-    }
+  if (request.event === "toggle") {
+    toggleComments();
+  }
 });
