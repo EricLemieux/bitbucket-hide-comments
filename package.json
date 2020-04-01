@@ -26,7 +26,7 @@
     "webextension-polyfill": "^0.6.0"
   },
   "devDependencies": {
-    "web-ext": "^3.0.0",
+    "web-ext": "^4.1.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   }
