@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/EricLemieux/bitbucket-hide-comments#readme",
   "dependencies": {
-    "webextension-polyfill": "^0.6.0"
+    "webextension-polyfill": "^0.7.0"
   },
   "devDependencies": {
     "web-ext": "^5.3.0",
