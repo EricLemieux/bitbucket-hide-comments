@@ -1,0 +1,19 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: webpack-cli
+    versions:
+    - 4.2.0
+    - 4.4.0
+    - 4.5.0
+  - dependency-name: web-ext
+    versions:
+    - 5.5.0
+  - dependency-name: webpack
+    versions:
+    - 5.10.0
